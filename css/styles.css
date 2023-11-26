@@ -192,9 +192,43 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 .user-header__menu {
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease 0s;
   position: absolute;
-  top: 78px;
+  top: 88px;
   right: 15px;
   background-color: #1c242a;
-  padding: 20px;
+  padding: 8px 25px 31px 20px;
+}
+.user-header__menu li:not(:last-child) {
+  margin: 0px 0px 8px 0px;
+}
+.user-header__menu._active {
+  top: 78px;
+  opacity: 1;
+  visibility: visible;
+}
+.user-header__link {
+  color: #ffffff;
+  line-height: 1.79;
+  padding: 0px 0px 0px 30px;
+  display: inline-block;
+}
+.user-header__link_1 {
+  background: url("../img/header/earth.png") 1px center no-repeat;
+}
+.user-header__link_2 {
+  background: url("../img/header/key.png") left center no-repeat;
+}
+.user-header__link_3 {
+  background: url("../img/header/palm.png") 4px center no-repeat;
+}
+.user-header__link_4 {
+  background: url("../img/header/hammer.png") left center no-repeat;
+}
+@media (min-width: 992px) {
+  .user-header__link:hover {
+    text-decoration: underline;
+  }
 }
