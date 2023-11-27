@@ -106,9 +106,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 [class*=__container] {
-  max-width: 980px;
+  max-width: 970px;
   margin: 0 auto;
-  padding: 0px 15px;
+  padding: 0px 10px;
   position: relative;
 }
 
@@ -123,10 +123,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 .menu {
   flex: 1 1 auto;
-  padding: 0px 0px 0px 8.6315789474%;
+  padding: 0px 0px 0px 3.1578947368%;
 }
 .menu__list {
   display: flex;
+  justify-content: center;
 }
 .menu__list li:not(:last-child) {
   margin: 0px 30px 0px 0px;
@@ -182,10 +183,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 .actions-header__region {
   padding: 0px 0px 0px 30px;
+  min-width: 18px;
+  min-height: 18px;
   background: url("../img/header/globe.png") left no-repeat;
+}
+@media (max-width: 890px) {
+  .actions-header__region span {
+    display: none;
+  }
 }
 .actions-header__user {
   margin: 0px 0px 0px 30px;
+}
+@media (max-width: 890px) {
+  .actions-header__user {
+    margin: 0px 0px 0px 15px;
+  }
 }
 
 .user-header__icon {
@@ -197,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
   transition: all 0.3s ease 0s;
   position: absolute;
   top: 88px;
-  right: 15px;
+  right: 10px;
   background-color: #1c242a;
   padding: 8px 25px 31px 20px;
 }

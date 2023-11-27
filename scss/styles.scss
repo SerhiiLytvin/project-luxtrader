@@ -37,9 +37,9 @@
 }
 
 [class*="__container"] {
-   max-width: 980px;
+   max-width: 970px;
    margin: 0 auto;  
-   padding: 0px 15px; 
+   padding: 0px 10px; 
    position: relative;
 }
 
@@ -63,7 +63,7 @@
 }
 .menu {
    flex: 1 1 auto;
-   padding: 0px 0px 0px 82px/950px*100%;
+   padding: 0px 0px 0px 30px/950px*100%;
 
    &__icon {
    }
@@ -73,7 +73,8 @@
 
    &__list {
       display: flex;
-      li {
+      justify-content: center;
+      li {         
          &:not(:last-child) {
             margin: 0px 30px 0px 0px;
          }
@@ -134,11 +135,21 @@
    &__region {
       @extend .menu__link;
       padding: 0px 0px 0px 30px;
+      min-width: 18px;
+      min-height: 18px;
       background: url('../img/header/globe.png') left no-repeat;
+      @media (max-width: 890px) {
+         span {
+            display: none;
+         };
+      }
    }
 
    &__user {
       margin: 0px 0px 0px 30px;
+      @media (max-width: 890px) {
+         margin: 0px 0px 0px 15px;
+      }
    }
 }
 .user-header {
@@ -153,7 +164,7 @@
       transition: all 0.3s ease 0s;
       position: absolute;
       top: 88px;
-      right: 15px;
+      right: 10px;
       background-color: #1c242a;
       padding: 8px 25px 31px 20px;
 
